@@ -79,19 +79,19 @@ const App = () => {
     }
   ];
 
-  const skills = [
-    { name: "JavaScript", color: "bg-yellow-100", textColor: "text-yellow-800", emoji: "🟨" },
+const skills = [
+    { name: "JavaScript", color: "bg-yellow-100", textColor: "text-yellow-800", emoji: "🟨"  },
     { name: "Python", color: "bg-blue-100", textColor: "text-blue-800", emoji: "🐍" },
     { name: "React", color: "bg-cyan-100", textColor: "text-cyan-800", emoji: "⚛️" },
     { name: "Node.js", color: "bg-green-100", textColor: "text-green-800", emoji: "🟢" },
     { name: "TypeScript", color: "bg-blue-100", textColor: "text-blue-800", emoji: "📘" },
     { name: "SQL", color: "bg-orange-100", textColor: "text-orange-800", emoji: "🗄️" },
-    { name: "Docker", color: "bg-blue-100", textColor: "text-blue-800", emoji: "🐳" },
-    { name: "AWS", color: "bg-yellow-100", textColor: "text-yellow-800", emoji: "☁️" },
     { name: "MongoDB", color: "bg-green-100", textColor: "text-green-800", emoji: "🍃" },
     { name: "PostgreSQL", color: "bg-blue-100", textColor: "text-blue-800", emoji: "🐘" },
-    { name: "TensorFlow", color: "bg-orange-100", textColor: "text-orange-800", emoji: "🧠" },
-    { name: "Vue.js", color: "bg-green-100", textColor: "text-green-800", emoji: "💚" }
+    { name: "HTML", color: "bg-orange-100", textColor: "text-orange-800", emoji: "🔶" }, // HTML: diamante naranja
+    { name: "CSS", color: "bg-blue-100", textColor: "text-blue-800", emoji: "🎨" }, // CSS: paleta de pintura
+    { name: "Figma", color: "bg-green-100", textColor: "text-pink-800", emoji: "🖌️" }, // Figma: pincel
+    { name: "Photoshop", color: "bg-blue-100", textColor: "text-indigo-800", emoji: "🖼️" }, // Photoshop: cuadro
   ];
 
   const getTechColor = (tech: string) => {
@@ -109,15 +109,15 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+  <div className="min-h-screen" style={{ background: 'var(--ios-bg)' }}>
       {/* Main Container */}
-      <div className="mx-auto max-w-7xl px-4 py-8">
+  <div className="mx-auto max-w-7xl px-4 py-8 sf-body">
         
         {/* Top Section - Profile & About */}
-        <div className="mb-12 grid gap-8 lg:grid-cols-3">
+  <div className="mb-12 grid gap-8 lg:grid-cols-3 sf-body">
           
           {/* Left Side - Profile Card */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 sf-body">
             <div className="sticky top-8">
               <div className="rounded-3xl bg-white p-8 shadow-sm border border-gray-100">
                 
@@ -125,15 +125,15 @@ const App = () => {
                 <div className="mb-6 text-center">
                   <div className="relative mx-auto mb-4 h-32 w-32">
                     <img 
-                      src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
-                      alt="Alex Rodriguez" 
+                      src="src/public/emoji.png" 
+                      alt="German Lopez" 
                       className="h-full w-full rounded-full object-cover shadow-lg border-4 border-white"
                     />
                     <div className="absolute -bottom-1 -right-1 h-8 w-8 rounded-full bg-green-400 border-3 border-white shadow-md flex items-center justify-center">
                       <span className="text-xs">🟢</span>
                     </div>
                   </div>
-                  <h1 className="text-2xl font-bold text-gray-900 mb-1">Alex Rodriguez</h1>
+                  <h1 className="text-2xl font-bold text-gray-900 mb-1">Germán López</h1>
                   <p className="text-blue-600 font-medium mb-4">👨‍💻 Systems Engineer</p>
                 </div>
 
@@ -145,7 +145,7 @@ const App = () => {
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 uppercase tracking-wide">Email</p>
-                      <p className="text-sm font-medium text-gray-900">alex.rodriguez@email.com</p>
+                      <p className="text-sm font-medium text-gray-900">germangraphs@gmail.com</p>
                     </div>
                   </div>
 
@@ -155,7 +155,7 @@ const App = () => {
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 uppercase tracking-wide">Teléfono</p>
-                      <p className="text-sm font-medium text-gray-900">+57 300 123 4567</p>
+                      <p className="text-sm font-medium text-gray-900">+57 310 526 0516</p>
                     </div>
                   </div>
 
@@ -165,7 +165,7 @@ const App = () => {
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 uppercase tracking-wide">Ubicación</p>
-                      <p className="text-sm font-medium text-gray-900">🇨🇴 Bogotá, Colombia</p>
+                      <p className="text-sm font-medium text-gray-900">🇨🇴 Valledupar, Colombia</p>
                     </div>
                   </div>
                 </div>
@@ -173,14 +173,14 @@ const App = () => {
                 {/* Social Links */}
                 <div className="mt-8 flex gap-3">
                   <a 
-                    href="#"
+                    href="https://github.com/GermanAndresLopez"
                     className="flex-1 flex items-center justify-center gap-2 rounded-2xl bg-gray-900 px-4 py-3 text-white font-medium hover:bg-gray-800 transition-colors"
                   >
                     <Github className="h-4 w-4" />
                     GitHub
                   </a>
                   <a 
-                    href="#"
+                    href="https://www.linkedin.com/in/germanlopezweb/"
                     className="flex-1 flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-4 py-3 text-white font-medium hover:bg-blue-700 transition-colors"
                   >
                     <Linkedin className="h-4 w-4" />
@@ -191,11 +191,11 @@ const App = () => {
                 {/* Stats */}
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   <div className="text-center p-4 rounded-2xl bg-blue-50">
-                    <div className="text-2xl font-bold text-blue-600">5+</div>
+                    <div className="text-2xl font-bold text-blue-600">2+</div>
                     <div className="text-xs text-blue-700 font-medium">Años exp.</div>
                   </div>
                   <div className="text-center p-4 rounded-2xl bg-green-50">
-                    <div className="text-2xl font-bold text-green-600">50+</div>
+                    <div className="text-2xl font-bold text-green-600">10+</div>
                     <div className="text-xs text-green-700 font-medium">Proyectos</div>
                   </div>
                 </div>
@@ -215,47 +215,48 @@ const App = () => {
               
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  🚀 Ingeniero de Sistemas con más de 5 años de experiencia en desarrollo web full-stack, 
-                  análisis de datos y arquitectura de software. Especializado en crear soluciones 
-                  tecnológicas innovadoras que impulsan el crecimiento empresarial.
+                 Soy Desarrollador Web Frontend y Analista de Datos, con experiencia en la creación de interfaces modernas y responsivas utilizando HTML5, CSS3, JavaScript, React y Vite. <br /> También manejo UX/UI design, elaboración de wireframes, prototipos y layouts en Figma, aplicando principios de usabilidad, alineación y sistemas de grid. <br />
+<br />En análisis de datos, manejo Excel avanzado, Power BI y Looker Studio, desarrollando dashboards interactivos y reportes estratégicos que apoyan la toma de decisiones.
+<br /><br />Me destaco por mi capacidad de resolver problemas, aprender rápido y adaptarme a nuevas tecnologías, aportando valor a través de la combinación de desarrollo frontend, diseño UX/UI y analítica de datos para impulsar la innovación y la transformación digital.
                 </p>
                 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="sf-subtitle leading-relaxed" style={{ fontSize: '17px' }}>
                   💡 Mi enfoque combina metodologías ágiles, mejores prácticas de desarrollo y 
                   análisis de datos para entregar productos de alta calidad que generen valor real. 
                   Me apasiona resolver problemas complejos y crear experiencias digitales excepcionales.
                 </p>
 
-                {/* Specializations */}
+                {}
                 <div className="grid gap-4 md:grid-cols-3">
-                  <div className="rounded-2xl bg-blue-50 p-4 text-center">
-                    <div className="text-2xl mb-2">💻</div>
-                    <h3 className="font-semibold text-blue-900 mb-1">Full Stack</h3>
-                    <p className="text-xs text-blue-700">Desarrollo web completo</p>
-                  </div>
-                  <div className="rounded-2xl bg-green-50 p-4 text-center">
-                    <div className="text-2xl mb-2">📊</div>
-                    <h3 className="font-semibold text-green-900 mb-1">Data Analysis</h3>
-                    <p className="text-xs text-green-700">Análisis y visualización</p>
-                  </div>
-                  <div className="rounded-2xl bg-purple-50 p-4 text-center">
-                    <div className="text-2xl mb-2">🏗️</div>
-                    <h3 className="font-semibold text-purple-900 mb-1">Architecture</h3>
-                    <p className="text-xs text-purple-700">Diseño de sistemas</p>
-                  </div>
+                    <div className="rounded-2xl bg-blue-50 p-4 text-center">
+                      <div className="text-2xl mb-2">💻</div>
+                      <h3 className="sf-title mb-1">Front-end</h3>
+                      <p className="sf-subtitle">Desarrollo web</p>
+                    </div>
+                    <div className="rounded-2xl bg-green-50 p-4 text-center">
+                      <div className="text-2xl mb-2">📊</div>
+                      <h3 className="sf-title mb-1">Analisis de Datos</h3>
+                      <p className="sf-subtitle">Análisis y visualización</p>
+                    </div>
+                    <div className="rounded-2xl bg-purple-50 p-4 text-center">
+                      <div className="text-2xl mb-2">🏗️</div>
+                      <h3 className="sf-title mb-1">UX/UI</h3>
+                      <p className="sf-subtitle">Diseño de interfaces</p>
+                    </div>
                 </div>
 
                 {/* Skills */}
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">🛠️ Tecnologías</h3>
+                  <h3 className="sf-title mb-4">🛠️ Tecnologías</h3>
                   <div className="flex flex-wrap gap-2">
                     {skills.map((skill) => (
                       <span 
                         key={skill.name}
-                        className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-medium ${skill.color} ${skill.textColor} border border-current border-opacity-20`}
+                        className={`inline-flex items-center gap-1 rounded-full px-3 py-1 border border-current border-opacity-20 ${skill.color} ${skill.textColor}`}
+                        style={{ userSelect: 'none', cursor: 'default' }}
                       >
-                        <span className="text-xs">{skill.emoji}</span>
-                        {skill.name}
+                        <span className="text-xs" style={{ userSelect: 'none', cursor: 'default' }}>{skill.emoji}</span>
+                        <span className="sf-body">{skill.name}</span>
                       </span>
                     ))}
                   </div>
@@ -272,7 +273,7 @@ const App = () => {
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100">
                 <Briefcase className="h-6 w-6 text-orange-600" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">💼 Proyectos Destacados</h2>
+              <h2 className="sf-title" style={{ fontSize: '22px' }}>💼 Proyectos Destacados</h2>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
@@ -301,14 +302,14 @@ const App = () => {
                   
                   <div className="p-6 bg-white">
                     <div className="mb-2 flex items-start justify-between">
-                      <h3 className="text-xl font-bold text-gray-900 leading-tight">{project.title}</h3>
+                      <h3 className="sf-title" style={{ fontSize: '19px' }}>{project.title}</h3>
                       <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-blue-600 transition-colors flex-shrink-0 ml-2" />
                     </div>
                     
-                    <p className="mb-3 text-sm text-blue-600 font-medium">{project.category}</p>
-                    <p className="mb-4 text-gray-600 leading-relaxed text-sm">{project.description}</p>
+                    <p className="mb-3 sf-subtitle">{project.category}</p>
+                    <p className="mb-4 sf-body">{project.description}</p>
                     
-                    <div className="mb-4 flex items-center gap-4 text-xs text-gray-500">
+                    <div className="mb-4 flex items-center gap-4 sf-body">
                       <div className="flex items-center gap-1">
                         <Calendar className="h-3 w-3" />
                         {project.duration}
@@ -321,10 +322,10 @@ const App = () => {
                         return (
                           <span 
                             key={tech}
-                            className={`inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-medium ${techColor.color} ${techColor.textColor} border border-current border-opacity-20`}
+                            className={`inline-flex items-center gap-1 rounded-full px-2 py-1 border border-current border-opacity-20 ${techColor.color} ${techColor.textColor}`}
                           >
                             <span className="text-xs">{techColor.emoji}</span>
-                            {tech}
+                            <span className="sf-body">{tech}</span>
                           </span>
                         );
                       })}
@@ -339,13 +340,13 @@ const App = () => {
         {/* Contact CTA */}
         <div className="mt-16 text-center">
           <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white">
-            <h2 className="mb-4 text-2xl font-bold">🤝 ¿Trabajamos juntos?</h2>
-            <p className="mb-6 text-blue-100 max-w-2xl mx-auto">
+            <h2 className="sf-title mb-4" style={{ fontSize: '22px', color: 'white' }}>🤝 ¿Trabajamos juntos?</h2>
+            <p className="sf-subtitle mb-6 max-w-2xl mx-auto" style={{ color: '#D1D1D6' }}>
               Estoy siempre abierto a discutir nuevas oportunidades, proyectos interesantes 
               y colaboraciones que generen impacto real.
             </p>
             <a 
-              href="mailto:alex.rodriguez@email.com"
+              href="mailto:germangraphs@gmail.com"
               className="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-8 py-4 font-semibold backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-105"
             >
               <Mail className="h-5 w-5" />
