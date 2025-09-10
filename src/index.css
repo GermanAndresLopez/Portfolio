@@ -1,4 +1,9 @@
 
+.fade-text {
+	transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+	will-change: opacity;
+}
+
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 @tailwind base;
@@ -15,11 +20,11 @@
 	--font-family-sf: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 	/* iOS colors */
 	--ios-label: #1C1C1E;
-	--ios-secondary: #3A3A3C;
-	--ios-tertiary: #48484A;
-	--ios-quaternary: #636366;
-	--ios-bg: #F2F2F7;
-	--ios-accent: #007AFF;
+	--ios-secondary: #8e8e93;
+	--ios-tertiary: #8e8e93;
+	--ios-quaternary: #d1d1d6;
+	--ios-bg: #efeff4;
+	--ios-accent: #007aff;
 }
 
 .sf-title {
