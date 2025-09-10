@@ -17,7 +17,7 @@ import {
   Book,
   DownloadCloud
 } from 'lucide-react';
-
+import emoji from './public/emoji.png'; // Foto de perfil con emoji
 // Fade effect for language change
 type FadeTextProps = {
   text: string;
@@ -280,8 +280,8 @@ const skills = [
                 {/* Profile Photo */}
                 <div className="mb-6 text-center">
                   <div className="relative mx-auto mb-4 h-32 w-32">
-                    <img 
-                      src="src/public/emoji.png" 
+                    <img
+       src={emoji}  
                       alt="German Lopez" 
                       className="h-full w-full rounded-full object-cover shadow-lg border-4 border-white"
                     />
